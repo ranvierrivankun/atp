@@ -11,6 +11,7 @@ class Profile extends CI_Controller
 		cek_login();
 	}
 
+	/*View Profile*/
 	public function index()
 	{
 		$data['title'] = 'ATP | Profile';
@@ -33,6 +34,7 @@ class Profile extends CI_Controller
 		$this->load->view('templates/footer');
 	}
 
+	/*modal edit profile*/
 	public function modal_edit_profile()
 	{
 		$id_user 	= $this->input->post('id_user');
@@ -42,6 +44,7 @@ class Profile extends CI_Controller
 		$this->load->view('profile/modal_edit_profile', $data, FALSE);
 	}
 
+	/*proses update profile*/
 	public function update_profile()
 	{
 		$id_user 		= $this->input->post('id_user');

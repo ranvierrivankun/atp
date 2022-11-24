@@ -1,4 +1,3 @@
-<!-- [ auth-signin ] start -->
 <div class="auth-wrapper">
 	<div class="auth-content">
 
@@ -47,4 +46,3 @@
 				</div>
 			</div>
 		</div>
-<!-- [ auth-signin ] end -->

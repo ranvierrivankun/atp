@@ -4,6 +4,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 class Profile_model extends CI_Model
 {
 
+	/*get user pengguna yang login*/
 	public function getUser($id_user)
 	{
 		$this->db->select('*');
@@ -14,6 +15,7 @@ class Profile_model extends CI_Model
 		return $query->row();
 	}
 
+	/*get user data pengguna*/
 	public function getUserData($id_user)
 	{
 		$this->db->select('*');
@@ -23,6 +25,7 @@ class Profile_model extends CI_Model
 		return $query->row();
 	}
 
+	/*total kwh sekarang sesuai id_user yang login*/
 	public function total_kwh_now($id_user)
 	{
 		$now = date('M-Y');
@@ -34,6 +37,7 @@ class Profile_model extends CI_Model
 		}
 	}
 
+	/*total kwh sesuai id_user yang login*/
 	public function total_kwh($id_user)
 	{
 		$query = $this->db->where('user_kmpk',$id_user)->get('kwh_pemakaian');

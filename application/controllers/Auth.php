@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Auth extends CI_Controller 
+class Auth extends CI_Controller
 {
 
 	public function __construct()
@@ -10,6 +10,7 @@ class Auth extends CI_Controller
 		$this->load->model('Auth_model', 'auth');
 	}
 
+	/*Cek Login*/
 	private function _has_login()
 	{
 		if ($this->session->has_userdata('login_session')) {
@@ -17,6 +18,7 @@ class Auth extends CI_Controller
 		}
 	}
 
+	/*View & Form Login*/
 	public function index()
 	{
 		$this->_has_login();
@@ -61,6 +63,7 @@ class Auth extends CI_Controller
 		}
 	}
 
+	/*Logout*/
 	public function logout()
 	{
 		$this->session->unset_userdata('login_session');

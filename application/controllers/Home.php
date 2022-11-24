@@ -11,6 +11,7 @@ class Home extends CI_Controller
 		cek_login();
 	}
 
+	/*Load View Home*/
 	public function index()
 	{
 		$data['title'] = 'ATP | Home';
@@ -22,6 +23,7 @@ class Home extends CI_Controller
 		$this->load->view('templates/footer');
 	}
 
+	/*Modal ganti Password*/
 	public function modal_ganti_password()
 	{
 		$id_user 	= $this->input->post('id_user');
@@ -31,6 +33,7 @@ class Home extends CI_Controller
 		$this->load->view('home/modal_ganti_password', $data, FALSE);
 	}
 
+	/*Proses ganti Password*/
 	public function proses_ganti_password()
 	{
 		$id_user 					= userdata('id_user');
@@ -55,6 +58,7 @@ class Home extends CI_Controller
 		$this->output->set_content_type('application/json')->set_output(json_encode($output));
 	}
 
+	/*Load View Dashboard per Role*/
 	public function dashboard()
 	{
 		/* Ambil Role dari userdata */
@@ -107,6 +111,7 @@ class Home extends CI_Controller
 
 	}
 
+	/*Table View kWh pada Dashboard*/
 	public function table_kwh_now()
 	{
 		$table 	= $this->hm->table_kn();
